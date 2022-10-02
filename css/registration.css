@@ -1,0 +1,516 @@
+
+ *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    /* transition: all 1.9s ease-in-out; */
+}
+html{
+    font-family: sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+.floatRight{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+.floatLeft{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.floatLeft.active,
+.floatRight.active{
+    display: none;
+}
+
+.logRight{
+    position: absolute;
+    left: 25%;
+    top: 50%;
+}
+.logLeft{
+    position: absolute;
+    right: 25%;
+    top: 60%;
+}
+.logLeft.active,
+.logRight.active{
+    display: none;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+.txt6trans{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+input::-webkit-input-placeholder{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+input:focus::-webkit-input-placeholder{
+    opacity: 0;
+    transition: all .4s ease-in-out;
+}
+.containner{
+    position: relative;
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    height: 100vh;
+    padding: 0 15px;
+    overflow: hidden;
+    margin: auto;
+}
+.containner::before{
+    transition: 1.8s ease-in-out;
+    animation-delay: .5s;
+    content: "";
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481eb, #04befe);
+    right: 50%;
+    top: -20%;
+    transform: translateY(-48%);
+}
+
+.containner.active:before{
+    transition: 1.8s ease-in-out;
+    animation-delay: .5s;
+    content: "";
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481eb, #04befe);
+    top: -20%;
+    transform: translate(100%, -50%);
+    right: 60%;
+}
+
+.formContainner{
+    /* background-color: #080; */
+    width: 100%;
+    height: 100%;
+    transform: translateY(-25%);
+}
+.formContainner.active{
+    display: none;
+}
+.formContainner form{
+    /* background-color: red; */
+    text-align: center;
+}
+.input-image-con{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.formContainner form input{
+    background-color: #DDD;
+    border: none;
+    font-weight: bold;
+    padding: 12px 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: block;
+    width: 350px;
+    cursor: pointer;
+}
+.formContainner form input:focus{
+    outline: none;
+}
+
+.formContainner .submit,
+.con-svg button{
+    background-color: #4169e1;
+    padding: 10px;
+    width: 100px;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    color: #FFF;
+}
+.formContainner .submit:hover{
+   transition: all .5s ease-in-out;
+    background-color: #1347e0;
+}
+.formContainner .image-con{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    background-color: #DDD;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.formContainner .image-con img{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    /* filter: grayscale(1); */
+    border-radius: 50%;
+}
+
+.formContainner .image-con img.active{
+    filter: none;
+}
+.formContainner .image-con img.full{
+    filter: none;
+}
+
+.formContainner .note{
+    /* background-color: forestgreen; */
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+    height: 100%;
+}
+.formContainner p{
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+.contImg-link{
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contImg-link .contIL{
+    /* background: aqua; */
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px 0 0 0;
+}
+.contImg-link .contIL img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: grayscale(1);
+}
+.contImg-link .contIL img:hover{
+    filter: none;
+}
+.con-svg{
+    /* background: aqua; */
+    float: left;
+    width: 50%;
+    /* background-color: brown; */
+    height: 100%;
+}
+.con-svg h1{
+    margin: 50px 0 0 0;
+    color: #FFF;
+    text-transform: capitalize;
+    text-align: center;
+}
+.con-svg p{
+    font-weight: bold;
+    text-align: center;
+    color: #FFF;
+    text-align: center;
+    margin: 10px 0;
+    width: 70%;
+    margin: 0 auto 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.con-svg button{
+    background-color: transparent;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    border: 2px solid #FFF !important;
+    width: 25%;
+    cursor: pointer !important;
+}
+
+.con-svg button:focus{
+    outline: none;
+}
+.con-svg .svg{
+    width: 65%;
+    height: 65%;
+}
+.con-svg.active{
+    display: none;
+}
+.con-svg .svg img{
+    width: 100%;
+    height: 100%;
+}
+
+
+ /* start media query */
+ 
+ /* start */
+ 
+ @media(max-width: 420px){
+	 
+	  .containner{
+        width: 250px;
+    }
+	  .containner::before{
+          position: absolute;
+		  right: -387%;
+		  top: -124%;
+          transform: translateY(-44%);
+    }
+	.containner.active:before{
+         transform: translate(55%, 24%);
+	}
+	.con-svg{
+		
+	width: 100%;
+    height: 50%;
+	}
+	.con-svg.floatRight{
+		width: 100%;
+		height: 45%;
+	}
+	.floatRight {
+    position: absolute;
+    right: 0%;
+    top: 56%;
+	}
+	.con-svg p{
+		width: 100%;
+	}
+	.formContainner .submit,
+	.con-svg button{
+		width: 65%;
+	}
+	.con-svg .svg{
+		display: none;
+	}
+	.formContainner {
+    width: 100%;
+    height: 50%;
+    transform: translateY(-25%);
+	}
+	.formContainner.logLeft{
+		width: 100%;
+		height: 56%;
+	}
+	.formContainner.logLeft h1{
+		margin: 5% 0 0 0;
+	}
+	.logRight{
+	position: absolute;
+    left: 0;
+    top: 63%;
+	}
+	.logLeft{
+		position: absolute;
+		left: 0;
+		top: 14%;
+	}
+ }
+ 
+ 
+ /* end */
+
+ /* ------------------------------------------------------------------*/
+  
+/* start*/ 
+
+@media(min-width: 421px) and (max-width: 767px){
+
+    .containner{
+        width: 400px;
+    }
+   
+    .con-svg{
+        height: 50%;
+        width: 100%;
+    }
+    .containner::before{
+        position: absolute;
+        right: -145%;
+        top: -135%;
+        transform: translateY(-43%);
+    }
+
+    .con-svg{
+        height: 50%;
+        width: 100%;
+    }
+    .con-svg h1{
+        width: 100%;
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+    .con-svg p{
+        width: 98%;
+        margin: 8px 0;
+        font-size: 17px;
+    }
+    .con-svg button,
+    .formContainner .submit{
+        width: 45%;
+    }
+    .con-svg .svg{
+        display: none;
+    }
+
+    .formContainner{
+        width: 96%;
+    }
+    .logRight{
+        position: absolute;
+        left: 2%;
+        top: 50%;
+    }
+    .formContainner h1{
+        margin: 20% 0 0 0;
+    }
+    /* --------- */
+    .containner.active::before {
+        position: absolute;
+        right: 320%;
+        top: 215%;
+        transform: translate(98%, -52%);
+    }
+    .formContainner.trans {
+        height: 80%;
+        transform: translateY(-25%);
+    }
+    .logLeft {
+        position: absolute;
+        right: 2%;
+        top: 12%;
+    }
+    .formContainner .logLeft  h1{
+        margin: 10% 0 0 0;
+    }
+    .con-svg.floatRight{
+        position: absolute;
+        top: 70%;
+        height: 25%;
+    }
+    .con-svg.floatRight p{
+        width: 95%;
+    }
+}
+
+/* end*/ 
+ 
+ /* ------------------------------------------------------------------------------- */
+ 
+/* start*/ 
+@media(min-width: 768px) and (max-width: 991px){
+
+   
+    .containner{
+        width: 751px;
+    }
+	
+	.containner::before{
+        position: absolute;
+        right: -70%;
+        top: -130%;
+        transform: translateY(-42%);
+    }
+
+      .containner.active::before{
+            position: absolute;
+			top: 100%;
+			right: 75%;
+            transform: translate(50%, -16%);
+    }
+	.con-svg{
+		 width: 100%;
+		height: 50%;
+
+	}
+	.con-svg.floatLeft .svg{
+		width: 40%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.con-svg.floatLeft .svg img{
+		position: absolute;
+		top: -15%;
+	}
+	.con-svg.floatRight .svg img{
+		position: absolute;
+		top: 7%;
+		left: -8%;
+	}
+	.con-svg.floatRight .svg{
+		width: 40%;
+		height: 90%;
+		position: absolute;
+		bottom: -100%;
+		right: 0;
+	}
+	.con-svg .fl{
+			width: 58%;
+			position: absolute;
+			height: 100%;
+	}
+	.con-svg .fr{
+		width: 58%;
+		position: absolute;
+		height: 90%;
+		bottom: -100%;
+	}
+	.con-svg .fl p,
+	.con-svg .fr p{
+		width: 100%;
+	}
+
+	.formContainner.logRight{
+		width: 100%;
+		height: 50%;
+		transform: translateY(0);
+	}
+	.formContainner.logLeft{
+		position: absolute;
+		left: 0;
+		height: 54%;
+		top: 89px;
+	}
+	.formContainner.logLeft h1{
+		margin: 3% 0 0 0;
+	}
+	.logRight {
+    position: absolute;
+    left: 0;
+    top: 50%;
+	}
+}
+
+/* end*/ 
+
+/* ------------------------------------------------------------------*/
+/* strat*/
+@media(min-width: 992px){
+
+    .containner{
+        width: 100%;
+    }
+
+}
+/* end /= */
+

@@ -1,0 +1,184 @@
+/* start styling prduct gallory  */
+
+.product_gallory .title_body{
+    background-color: #2196f3;
+    width: 20%;
+    border-top-right-radius: 35px;
+    padding: 5px 0;
+    text-align: center;
+}
+.product_gallory hr{
+    border: 1px solid #DDD;
+    margin-bottom: 2%;
+    width: 100%;
+}
+.product_gallory .star .svg-inline--fa.fa-w-18 {
+    color: orange;
+}
+.product_gallory .filter_btn{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.product_gallory .filter_btn .filter_btn_parent{
+    width: 80%;
+    background-color: #FFF;
+    display: flex;
+}
+.product_gallory .filter_btn .filter_btn_parent > div.btn{
+    background-color: #2196f3;
+    margin-right: 3%;
+    width: 17.6%;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+    padding: 10px 0;
+}
+.product_gallory .filter_btn .filter_btn_parent > div.btn.active,
+.product_gallory .filter_btn .filter_btn_parent > div.btn:hover{
+    background-color: #efefef;
+    border: 1px solid #DDD;
+    color: coral;
+}
+.product_gallory .filter_btn .filter_btn_parent > div.btn:last-of-type{
+    margin-right: 0;
+}
+.product_gallory .prent{
+    position: relative;
+    height: 80%;
+}
+.product_gallory .parent-product-img{
+    width: 100%;
+    overflow: hidden;
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+}
+.product_gallory .parent-product-img > div.product_img{
+    /* background-color: crimson; */
+    margin: 2% 2% 0 0;
+    width: calc(32% - 3px);
+    border: 1px solid #DDD;
+}
+.product_gallory .parent-product-img > div.product_img:nth-of-type(3),
+.product_gallory .parent-product-img > div.product_img:nth-of-type(6),
+.product_gallory .parent-product-img > div.product_img:nth-of-type(9){
+    /* background-color: yellow; */
+    margin: 2% 0 0 0;
+}
+.product_gallory .cont_img{
+    width: 30%;;
+    height: 100%;
+}
+.product_gallory .cont_img .place-img{
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #DDD;
+    position: relative;
+}
+.product_gallory .cont_img .place-img img{
+    width: 100%;
+    height: 100%;
+}
+.product_gallory .cont_content{
+    width: 70%;
+    /* background-color: coral; */
+}
+.product_gallory .cont_content h2{
+    color: #2196f3;
+}
+.product_gallory .cont_content .parent-content{
+    padding: 8% 0;
+}
+.product_gallory .cont_content hr{
+    margin: 4% 0;
+}
+.product_gallory .cont_content .box,
+.product_gallory .cont_content h2{
+    margin-left: 5%;
+}
+.product_gallory .cont_content .box .price > span{
+    font-weight: bold;
+    color: coral;
+    text-transform: capitalize;
+}
+
+/* end styling prduct gallory  */
+/* start responsives for gallory page  */
+/* for meduim screen  */
+@media(min-width: 768px) and (max-width: 991px){
+
+    .product_gallory .title_body{
+        width: 35%;
+        margin-top: 4%;
+    }
+    .product_gallory .filter_btn .filter_btn_parent{
+        width: 100%;
+    }
+    .product_gallory .filter_btn .filter_btn_parent > div.btn{
+        font-weight: normal !important;
+        font-size: .9em;
+    
+    }
+    .product_gallory .filter_btn .filter_btn_parent > div.btn:hover{
+        border: none !important;
+    }
+    .product_gallory .parent-product-img > div.product_img{
+        width: calc(49% - 3px);
+    }
+    .product_gallory .parent-product-img > div.product_img:nth-child(2),
+    .product_gallory .parent-product-img > div.product_img:nth-child(8){
+        margin-right: 0;
+    }
+    .product_gallory .parent-product-img > div.product_img:last-child{
+        width: 100%;
+    }
+    .product_gallory .parent-product-img > div.product_img:nth-child(4){
+        margin-left: 2% !important;
+        margin-right: 0 !important;
+    }
+
+}
+/* for small screen  */
+@media(max-width: 767px){
+    .product_gallory .title_body{ 
+        width: 40%;
+    }
+    .product_gallory .title_body h2{
+        font-size: 1em !important;
+    }
+    .product_gallory .filter_btn .filter_btn_parent{
+        width: 100%;
+        text-align: center;
+    }
+    .product_gallory .filter_btn .filter_btn_parent > div.btn {
+        font-weight: normal !important;
+        /* padding: 0 !important; */
+    }
+    .product_gallory .filter_bt,
+    .product_gallory .filter_btn .filter_btn_parent{
+        display: block;
+    }
+    .product_gallory .filter_btn .filter_btn_parent > div.btn{
+        display: inline-block;
+        width: 30%;
+        padding: 5px 0;
+        margin-top: 2%;
+    }
+    .product_gallory .filter_btn .filter_btn_parent > div.btn:nth-of-type(3){
+        margin-right: 0;
+        font-size: 14px;
+    }
+    .product_gallory .filter_btn .filter_btn_parent > div.btn:nth-of-type(4){
+        font-size: 14px;
+    }
+    .product_gallory .parent-product-img > div.product_img{
+        width: 100%;
+        margin: 2% 0 0 0;
+    }
+
+}
